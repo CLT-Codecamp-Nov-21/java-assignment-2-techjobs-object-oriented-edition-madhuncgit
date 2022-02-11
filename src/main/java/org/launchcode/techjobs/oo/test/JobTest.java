@@ -36,8 +36,9 @@ public class JobTest {
 @Test
     public void testJobsForEquality(){
        Job newJob1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-       Job newJob2 = new Job ("Product tester", new Employer("AMZN"), new Location("Charlotte"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-       assertFalse(newJob1.getId() == newJob2.getId());
+       Job newJob2 = new Job ("Product tester", new Employer("ACME"), new Location("Charlotte"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+       assertFalse(newJob1.equals( newJob2));
+
 }
 @Test
     public void testToStringStartsAndEndsWithNewLine(){
